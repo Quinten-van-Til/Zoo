@@ -1,0 +1,23 @@
+﻿<Window x:Class="Dierenpark.WindowEchtpaar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dierenpark"
+        mc:Ignorable="d"
+        Title="WindowEchtpaar" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="EchtpaarRow0" Height="225"/>
+            <RowDefinition x:Name="EchtpaarRow1" Height="225"/>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="0,50,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical" Grid.Row="0">
+            <Label Margin="0,0,0,10" HorizontalAlignment="Center" Content="Selecteer de geboortedata"/>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+                <DatePicker Name="Echtpaar_Birth1" HorizontalAlignment="Center" SelectedDateChanged="Echtpaar_Birth1_SelectedDateChanged" Margin="0,0,0,5"/>
+                <DatePicker Name="Echtpaar_Birth2" HorizontalAlignment="Center" SelectedDateChanged="Echtpaar_Birth2_SelectedDateChanged" Margin="0,5,0,0"/>
+            </StackPanel>
+        </StackPanel>
+        <Button Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Add" Grid.Row="1" Height="25" Width="60" Click="Button_Click"/>
+    </Grid>
+</Window>

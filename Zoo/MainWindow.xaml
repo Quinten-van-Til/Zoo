@@ -1,0 +1,49 @@
+﻿<Window x:Class="Dierenpark.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dierenpark"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+        
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="MainRow0" Height="225"/>
+            <RowDefinition x:Name="MainRow1" Height="225"/>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0">
+            <Label HorizontalAlignment="Center" Content="Wie wilt u toevoegen?"/>
+            <StackPanel Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                <Button Width="60" Height="25" Margin="0,0,10,0" Content="Persoon" Click="Button_Click_Persoon"/>
+                <Button Width="60" Height="25" Margin="10,0,0,0" Content="Echtpaar" Click="Button_Click_Echtpaar"/>
+            </StackPanel>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <Label x:Name="Persoon_Txt"       Visibility="Collapsed" Content="Aantal personen:"        Margin="80,0,0,0"/>
+                <Label x:Name="Kind_Txt"          Visibility="Collapsed" Content="Aantal kinderen:"        Margin="80,0,0,0"/>
+                <Label x:Name="Persoon65_Txt"     Visibility="Collapsed" Content="Aantal personen 65+"     Margin="80,0,0,0"/>
+                <Label x:Name="Echtpaar_Txt"      Visibility="Collapsed" Content="Aantal Echtparen:"       Margin="80,0,0,0"/>
+                <Label x:Name="Echtpaar65_Txt"    Visibility="Collapsed" Content="Aantal Echtparen 65+:"   Margin="80,0,0,0"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <Label x:Name="Persoon_Aantal"      Visibility="Collapsed" Content="" Margin="00,0,0,0"/>
+                <Label x:Name="Kind_Aantal"         Visibility="Collapsed" Content="" Margin="00,0,0,0"/>
+                <Label x:Name="Persoon65_Aantal"    Visibility="Collapsed" Content="" Margin="00,0,0,0"/>
+                <Label x:Name="Echtpaar_Aantal"     Visibility="Collapsed" Content="" Margin="00,15,0,0"/>
+                <Label x:Name="Echtpaar65_Aantal"   Visibility="Collapsed" Content="" Margin="00,0,0,0"/>
+            </StackPanel>
+            <StackPanel Grid.Column="2" HorizontalAlignment="Center">
+                <Label x:Name="Prijs_Txt" Content="Totale kosten:" Margin="0,0,0,0"/>
+                <Label x:Name="Prijs_Aantal" Content="" Margin="0,0,0,0"/>
+                <Button Width="100" Height="50" VerticalAlignment="Top" Content="Afrekenen" FontSize="18" Click="Afrekenen_Click" Margin="0,50,0,0"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
